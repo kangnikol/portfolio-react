@@ -28,9 +28,10 @@ const Home = () => {
                     Bandung, Indonesia
                   </a>
                   . I love building products, solving problems, and everything
-                  around them.
+                  around them. Programmer for the most part, but I don't shy
+                  away from getting my feet wet in unfamiliar domains.
                 </p>
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-7">
                   <div className="p-2 flex gap-4 rounded">
                     <a href="mailto:nicholasalvisaputra@gmail.com">
                       <svg
