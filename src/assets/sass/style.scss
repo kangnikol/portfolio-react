@@ -1,4 +1,17 @@
 @import "./mocha";
+
+.text-input.astro-A4YOCCPA::-moz-placeholder {
+  opacity: 50%;
+}
+
+.text-input.astro-A4YOCCPA:-ms-input-placeholder {
+  opacity: 50%;
+}
+
+.text-input.astro-A4YOCCPA::placeholder {
+  opacity: 50%;
+}
+
 $font-family: "Mulish", sans-serif;
 
 .full-height {

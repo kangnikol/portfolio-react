@@ -1,3 +1,11 @@
+.text-input.astro-A4YOCCPA::-moz-placeholder {
+  opacity: 50%;
+}
+
+.text-input.astro-A4YOCCPA::placeholder {
+  opacity: 50%;
+}
+
 .full-height {
   height: 100%;
   margin: 0;
