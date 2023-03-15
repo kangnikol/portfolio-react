@@ -30,7 +30,7 @@ const Modal = () => {
       </button>
       {showModal && (
         <div className="fixed h-screen w-screen overflow-hidden z-auto top-0 left-0 bottom-0 right-0 opacity-100 backdrop-blur-2xl astro-A4YOCCPA">
-          <div className="relative opacity-100 h-screen rounded-3xl transition-all duration-300 ease-in-out border-base flex items-center astro-A4YOCCPA">
+          <div className="relative mx-4 opacity-100 h-screen w-screen rounded-3xl transition-all duration-300 ease-in-out border-base flex items-center astro-A4YOCCPA">
             <div className="max-w-3xl lg:mx-auto mr-8 text-text astro-A4YOCCPA">
               <div className="text-3xl font-black text-primary astro-A4YOCCPA">
                 Get In Touch
@@ -59,19 +59,22 @@ const Modal = () => {
                   Do you have an interesting job opportunity? Want to ask me a
                   question? Or, just want to connect? Feel free to contact me.
                 </p>
-                <div className="lg:flex-row flex-col flex mt-6 gap-4 astro-A4YOCCPA">
+                <div
+                  className="lg:flex-row flex-col flex mt-6 gap-4 astro-A4YOCCPA
+                "
+                >
                   <input
                     required
                     name="name"
                     type="text"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-64 border border-lavender astro-A4YOCCPA"
+                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-lavender astro-A4YOCCPA"
                     placeholder="Full Name"
                   />
                   <input
                     required
                     name="email"
                     type="email"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-64 border border-lavender astro-A4YOCCPA"
+                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-lavender astro-A4YOCCPA"
                     placeholder="Email"
                   />
                 </div>
