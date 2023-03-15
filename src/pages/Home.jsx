@@ -15,7 +15,7 @@ const Home = () => {
               </div>
             </div>
             <h1 className="text-primary text-4xl text-center font-black my-6">
-              Hey, I'm Nicholas Alvi Saputra.
+              Hey, I'm Nicholas.
             </h1>
             <div className="mt-4 text-lg flex items-center flex-col">
               <div className="max-w-3xl">
