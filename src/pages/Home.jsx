@@ -25,7 +25,7 @@ const Home = () => {
                     href="https://en.wikipedia.org/wiki/Bandung"
                     className="text-rosewater"
                   >
-                    bandung, Indonesia
+                    Bandung, Indonesia
                   </a>
                   . I love building products, solving problems, and everything
                   around them.
