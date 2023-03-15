@@ -35,7 +35,7 @@ const Project = () => {
   ]
   return (
     <div className="flex flex-col">
-      <main className="flex-1 mt-12 max-w-5xl mx-auto">
+      <main className="flex-1 mt-12 px-4 max-w-5xl mx-auto">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-lavender text-4xl font-black my-4 border-b border-overlay0 py-4">
             Projects!

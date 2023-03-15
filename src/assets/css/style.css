@@ -178,7 +178,6 @@ pre {
   align-items: center;
   gap: 0.75rem;
   border-radius: 0.5rem;
-  background-color: #1e1e2e !important;
   --tw-bg-opacity: 0.95;
   padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
@@ -204,7 +203,6 @@ pre {
   align-items: center;
   gap: 0.75rem;
   border-radius: 9999px;
-  background-color: #1e1e2e !important;
   --tw-bg-opacity: 0.9;
   padding: 0.75rem 1.25rem;
   --tw-text-opacity: 1;

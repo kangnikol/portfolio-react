@@ -9,7 +9,6 @@ const Modal = () => {
   const closeModal = () => {
     setShowModal(false)
   }
-  console.log(showModal)
 
   return (
     <>
@@ -24,16 +23,16 @@ const Modal = () => {
           color=""
           data-id="svg-loader_9"
         >
-          <path d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
         </svg>
         Contact Me
       </button>
       {showModal && (
         <div className="fixed h-screen w-screen overflow-hidden z-auto top-0 left-0 bottom-0 right-0 opacity-100 backdrop-blur-2xl astro-A4YOCCPA">
-          <div className="relative opacity-100 h-full rounded-3xl transition-all duration-300 ease-in-out border-gray-600 flex items-center astro-A4YOCCPA">
+          <div className="relative opacity-100 h-screen rounded-3xl transition-all duration-300 ease-in-out border-base flex items-center astro-A4YOCCPA">
             <div className="max-w-3xl lg:mx-auto mr-8 text-text astro-A4YOCCPA">
-              <div className="text-3xl font-bold text-primary astro-A4YOCCPA">
+              <div className="text-3xl font-black text-primary astro-A4YOCCPA">
                 Get In Touch
               </div>
               <div
@@ -49,7 +48,7 @@ const Modal = () => {
                   height="24"
                   id="close"
                   className="hover:text-text cursor-pointer astro-A4YOCCPA"
-                ></svg>
+                />
               </div>
               <form
                 action="https://formspree.io/f/meqderqp"
@@ -81,7 +80,7 @@ const Modal = () => {
                   name="message"
                   className="w-full bg-mantle p-3 rounded outline-none placeholder:text-text text-input mt-4 resize-none h-64 text-lg border border-lavender astro-A4YOCCPA"
                   placeholder="Message"
-                ></textarea>
+                />
                 <button
                   type="submit"
                   className="inline-flex items-center gap-3 rounded-lg bg-lavender opacity-50 py-3 px-5 text-sm leading-5 font-semibold text-crust transition-all hover:opacity-100 active:scale-95 active:transform-none mt-4 astro-A4YOCCPA"
