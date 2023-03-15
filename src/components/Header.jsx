@@ -21,6 +21,22 @@ const Header = () => {
           Projects
         </NavLink>
       </div>
+      <div className="lg:hidden flex justify-center gap-8 text-text w-full">
+        <NavLink
+          to="/"
+          activeclassname="active"
+          className="font-bold uppercase link"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/project"
+          activeclassname="active"
+          className="font-bold uppercase link"
+        >
+          Projects
+        </NavLink>
+      </div>
     </nav>
   )
 }

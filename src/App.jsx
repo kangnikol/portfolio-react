@@ -7,16 +7,14 @@ import Footer from "./components/Footer"
 
 const App = () => {
   return (
-    <div className="mocha">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Project />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 
