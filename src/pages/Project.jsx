@@ -26,6 +26,13 @@ const Project = () => {
         "https://media.discordapp.net/attachments/917983285370572821/1027057257789280296/Screen_Shot_2022-09-26_at_15.54.02.webp",
     },
     {
+      title: "Weather App",
+      desc: "Weather App that using OpenWeatherMap API and ReactJS with TailwindCSS. Also using Catppuccin's 'Mocha' Theme :3",
+      url: "https://weather.kangnikol.xyz/",
+      imgUrl:
+        "https://media.discordapp.net/attachments/917983285370572821/1086211645623259196/image.png?width=1360&height=662",
+    },
+    {
       title: "Startpage",
       desc: "This Startpage is built with somebody else, using Rosé Pine Theme and hosted to Vercel. it searched to Gowogle engine",
       url: "https://startpage.kangnikol.xyz/",
