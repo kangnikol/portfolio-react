@@ -12,7 +12,10 @@ const Modal = () => {
 
   return (
     <>
-      <button className="btn-secondary bg-surface0" onClick={openModal}>
+      <button
+        className="inline-flex py-2 px-4 items-center gap-3 rounded-full text-text/100 hover:opacity-100 opacity-90 bg-surface0 transition-all active:transform active:scale-x-90 active:scale-y-90"
+        onClick={openModal}
+      >
         <svg
           data-src="https://s2.svgbox.net/materialui.svg?ic=mail"
           width="16"

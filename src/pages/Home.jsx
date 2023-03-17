@@ -14,10 +14,10 @@ const Home = () => {
                 />
               </div>
             </div>
-            <h1 className="text-primary text-4xl text-center font-black my-6">
+            <h1 className="text-text text-4xl text-center font-black my-6">
               Hey, I'm Nicholas.
             </h1>
-            <div className="mt-4 text-lg flex items-center flex-col">
+            <div className="mt-4 text-text text-lg flex items-center flex-col">
               <div className="max-w-3xl">
                 <p>
                   Software Engineer living in{" "}

@@ -5,7 +5,6 @@ import "../assets/css/style.css"
 const Header = () => {
   return (
     <>
-      <div className="content"></div>
       <nav className="flex justify-center max-w-3xl mx-auto lg:my-16 my-8">
         <div className="hidden lg:flex gap-8 text-white">
           <NavLink
