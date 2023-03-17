@@ -3,7 +3,7 @@ import React from "react"
 const Home = () => {
   return (
     <>
-      <div className="full-height">
+      <div>
         <div className="flex flex-col">
           <main className="flex-1 mt-4 px-4 lg:px-0">
             <div className="flex justify-center">
