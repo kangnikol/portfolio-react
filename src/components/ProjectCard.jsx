@@ -37,7 +37,7 @@ const ProjectCard = (props) => {
         </Link>
       </div>
       <div className="w-1/2 mx-auto hidden lg:block">
-        <img src={props.imgUrl} />
+        <img className="bg-cover" src={props.imgUrl} />
       </div>
     </div>
   )
