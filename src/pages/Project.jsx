@@ -19,6 +19,13 @@ const Project = () => {
         "https://media.discordapp.net/attachments/917983285370572821/1027057257327898744/Screen_Shot_2022-09-08_at_16.28.18.webp",
     },
     {
+      title: "Ayoconnect",
+      desc: "Established in 2016, Ayoconnect is now Southeast Asia's largest Open Finance API platform. We provide full-stack API solutions, powering the leading companies of today and the tech unicorns of tomorrow.",
+      url: "https://pintek.id",
+      imgUrl:
+        "https://media.discordapp.net/attachments/917983285370572821/1087197360100225104/Screenshot_2023-03-20_091039.webp?",
+    },
+    {
       title: "Nichol+ Hotstar",
       desc: "Nichol+ Hotstar is actually a website that duplicate the looks from Disney+ Hotstar, using React.JS and TailwindCSS. I trained to consume API from TmdbAPI.",
       url: "https://hotstar.kangnikol.xyz",
@@ -30,7 +37,7 @@ const Project = () => {
       desc: "Weather App that using OpenWeatherMap API and ReactJS with TailwindCSS. Also using Catppuccin's 'Mocha' Theme :3",
       url: "https://weather.kangnikol.xyz/",
       imgUrl:
-        "https://media.discordapp.net/attachments/917983285370572821/1086211645623259196/image.png?width=1360&height=662",
+        "https://media.discordapp.net/attachments/917983285370572821/1087197359815000074/Screenshot_2023-03-20_091106.webp",
     },
     {
       title: "Startpage",
