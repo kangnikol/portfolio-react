@@ -21,7 +21,7 @@ const Project = () => {
     {
       title: "Ayoconnect",
       desc: "Established in 2016, Ayoconnect is now Southeast Asia's largest Open Finance API platform. We provide full-stack API solutions, powering the leading companies of today and the tech unicorns of tomorrow.",
-      url: "https://pintek.id",
+      url: "https://ayoconnect.com/",
       imgUrl:
         "https://media.discordapp.net/attachments/917983285370572821/1087197360100225104/Screenshot_2023-03-20_091039.webp?",
     },
