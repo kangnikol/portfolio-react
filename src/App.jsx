@@ -7,14 +7,14 @@ import Footer from "./components/Footer"
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Project />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   )
 }
 
