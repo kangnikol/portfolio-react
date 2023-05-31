@@ -8,6 +8,8 @@ const Footer = () => {
         <img
           src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"
           alt="catppuccin's Cat"
+          width={600}
+          height={75}
         />
       </div>
       <footer className="text-white px-4 max-w-3xl w-full flex justify-between mx-auto items-center mb-12">

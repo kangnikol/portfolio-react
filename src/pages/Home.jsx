@@ -10,7 +10,9 @@ const Home = () => {
               <div className="w-36 rounded-full photo relative">
                 <img
                   src="https://media.discordapp.net/attachments/917983285370572821/1085050541106790430/photo_portfolio.webp"
-                  alt=""
+                  alt="Nicholas's Photo"
+                  width={144}
+                  height={159}
                 />
               </div>
             </div>
