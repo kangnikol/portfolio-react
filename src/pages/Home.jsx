@@ -35,10 +35,7 @@ const Home = () => {
                 </p>
                 <div className="flex justify-center mt-7">
                   <div className="p-2 flex gap-4 rounded">
-                    <a
-                      href="mailto:nicholasalvisaputra@gmail.com"
-                      aria-label="Send email to nicholasalvisaputra@gmail.com"
-                    >
+                    <a href="mailto:nicholasalvisaputra@gmail.com">
                       <svg
                         className="opacity-50 hover:opacity-100 transition-all hover:text-text"
                         data-src="https://s2.svgbox.net/materialui.svg?ic=mail"
@@ -53,6 +50,7 @@ const Home = () => {
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                       </svg>
+                      <span className="sr-only">Contact Me!</span>
                     </a>
                     <a href="https://github.com/kangnikol">
                       <svg
