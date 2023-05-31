@@ -14,12 +14,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
       <Route index element={<Home />} />
-      <Route path="project" element={<Project />} />
+      <Route path="/project" element={<Project />} />
     </Route>
   )
 )
 
-const App = ({ routes }) => {
+const App = () => {
   return (
     <>
       <RouterProvider router={router} />
