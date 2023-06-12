@@ -40,7 +40,7 @@ const Project = () => {
         "https://media.discordapp.net/attachments/917983285370572821/1087197359815000074/Screenshot_2023-03-20_091106.webp",
     },
     {
-      title: "Startpage",
+      title: "Startpage (No longer used)",
       desc: "This Startpage is built with somebody else, using Rosé Pine Theme and hosted to Vercel. it searched to Gowogle engine",
       url: "https://startpage-kangnikol.vercel.app/",
       imgUrl:
