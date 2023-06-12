@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <nav className="flex justify-center max-w-3xl mx-auto lg:my-16 my-8">
-        <div className="hidden lg:flex gap-8 text-white">
+        <div className="hidden lg:flex gap-8 text-text">
           <NavLink
             to="/"
             activeclassname="active"
