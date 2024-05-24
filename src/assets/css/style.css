@@ -118,7 +118,7 @@ pre {
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 0.125rem;
   --tw-bg-opacity: 1;
-  background-color: #b4befe;
+  background-color: #f9e2af;
 }
 
 .link:hover {

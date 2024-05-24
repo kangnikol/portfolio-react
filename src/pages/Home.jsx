@@ -9,7 +9,7 @@ const Home = () => {
             <div className="flex justify-center">
               <div className="w-36 rounded-full photo relative">
                 <img
-                  src="https://media.discordapp.net/attachments/917983285370572821/1085050541106790430/photo_portfolio.webp?ex=66516310&is=66501190&hm=55afacafff273d74a4a615cf2404e32edae611d3d2de0ebae5654f7f78722c2b&=&format=webp&width=597&height=661"
+                  src="https://media.discordapp.net/attachments/917983285370572821/1243588288871272621/photo_portfolio.webp?ex=66520558&is=6650b3d8&hm=bf500867bcccf68ef84b1f5c4f1fbe48507ab5991a64e7d864c41ab72112bd1c&=&format=webp&width=597&height=661"
                   alt="Nicholas's Photo"
                   width={144}
                   height={159}
@@ -17,21 +17,21 @@ const Home = () => {
               </div>
             </div>
             <h1 className="text-text text-4xl text-center font-black my-6">
-              Hey, I'm Nicholas.
+              Hey, I'm Nikol.
             </h1>
             <div className="mt-4 text-text text-lg flex items-center flex-col">
               <div className="max-w-3xl">
                 <p>
-                  Software Engineer living in{" "}
+                  I'm a Software Engineer based in{" "}
                   <a
                     href="https://en.wikipedia.org/wiki/Bandung"
                     className="text-rosewater"
                   >
                     Bandung, Indonesia
                   </a>
-                  . I love building products, solving problems, and everything
-                  around them. Programmer for the most part, but I don't shy
-                  away from getting my feet wet in unfamiliar domains.
+                  . I enjoy creating products and tackling challenges related to
+                  them. While programming is my main focus, I'm not afraid to
+                  venture into new and unfamiliar areas.
                 </p>
                 <div className="flex justify-center mt-7">
                   <div className="p-2 flex gap-4 rounded">
@@ -41,7 +41,7 @@ const Home = () => {
                         data-src="https://s2.svgbox.net/materialui.svg?ic=mail"
                         width="24"
                         height="24"
-                        color="#fff"
+                        color="#b4befe"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -58,7 +58,7 @@ const Home = () => {
                         data-src="https://s2.svgbox.net/social.svg?ic=github"
                         width="24"
                         height="24"
-                        color="#fff"
+                        color="#b4befe"
                         role="img"
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -75,7 +75,7 @@ const Home = () => {
                         data-src="https://s2.svgbox.net/social.svg?ic=linkedin"
                         width="24"
                         height="24"
-                        color="#fff"
+                        color="#b4befe"
                         role="img"
                         viewBox="0 0 24 24"
                         fill="currentColor"

@@ -42,7 +42,7 @@ const Modal = () => {
                 className="absolute right-8 top-8 text-text items-center gap-2 flex astro-A4YOCCPA"
                 onClick={closeModal}
               >
-                <span className="bg-lavender opacity-50 hover:opacity-100 text-crust text-xs px-2 py-1 rounded lg:block astro-A4YOCCPA cursor-pointer">
+                <span className="bg-yellow opacity-50 hover:opacity-100 text-crust text-xs px-2 py-1 rounded lg:block astro-A4YOCCPA cursor-pointer">
                   esc
                 </span>
                 <svg
@@ -70,26 +70,26 @@ const Modal = () => {
                     required
                     name="name"
                     type="text"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-lavender astro-A4YOCCPA"
+                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-yellow astro-A4YOCCPA"
                     placeholder="Full Name"
                   />
                   <input
                     required
                     name="email"
                     type="email"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-lavender astro-A4YOCCPA"
+                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-yellow astro-A4YOCCPA"
                     placeholder="Email"
                   />
                 </div>
                 <textarea
                   required
                   name="message"
-                  className="w-full bg-mantle p-3 rounded outline-none placeholder:text-text text-input mt-4 resize-none h-64 text-lg border border-lavender astro-A4YOCCPA"
+                  className="w-full bg-mantle p-3 rounded outline-none placeholder:text-text text-input mt-4 resize-none h-64 text-lg border border-yellow astro-A4YOCCPA"
                   placeholder="Message"
                 />
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-3 rounded-lg bg-lavender opacity-50 py-3 px-5 text-sm leading-5 font-semibold text-crust transition-all hover:opacity-100 active:scale-95 active:transform-none mt-4 astro-A4YOCCPA"
+                  className="inline-flex items-center gap-3 rounded-lg bg-yellow opacity-50 py-3 px-5 text-sm leading-5 font-semibold text-crust transition-all hover:opacity-100 active:scale-95 active:transform-none mt-4 astro-A4YOCCPA"
                 >
                   Send
                 </button>
