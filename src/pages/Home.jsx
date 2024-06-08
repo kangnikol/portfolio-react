@@ -9,7 +9,7 @@ const Home = () => {
             <div className="flex justify-center">
               <div className="w-36 rounded-full photo relative">
                 <img
-                  src="https://media.discordapp.net/attachments/917983285370572821/1243588288871272621/photo_portfolio.webp?ex=66520558&is=6650b3d8&hm=bf500867bcccf68ef84b1f5c4f1fbe48507ab5991a64e7d864c41ab72112bd1c&=&format=webp&width=597&height=661"
+                  src="/photo_portfolio.webp"
                   alt="Nicholas's Photo"
                   width={144}
                   height={159}
