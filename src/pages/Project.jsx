@@ -50,7 +50,7 @@ const Project = () => {
   ]
   
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-10 md:py-20">
       <div className="flex flex-col gap-12">
         <div className="flex justify-between items-end border-b border-surface1 pb-4">
            <h2 className="text-xl font-medium text-subtext0 uppercase tracking-widest">Selected Works</h2>
@@ -68,19 +68,19 @@ const Project = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group flex flex-col md:flex-row md:items-center justify-between py-12 border-b border-surface1 hover:border-text transition-colors relative z-10"
+              className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-12 border-b border-surface1 hover:border-text transition-colors relative z-10"
               onMouseEnter={() => setHoveredProject(i)}
             >
               <div className="flex items-baseline gap-4 md:gap-12">
-                 <span className="font-mono text-sm text-overlay2">0{i + 1}</span>
-                 <h3 className="text-4xl md:text-6xl font-bold text-text group-hover:translate-x-4 transition-transform duration-500 ease-out">
+                 <span className="font-mono text-xs md:text-sm text-overlay2">0{i + 1}</span>
+                 <h3 className="text-3xl md:text-6xl font-bold text-text group-hover:translate-x-4 transition-transform duration-500 ease-out">
                    {e.title}
                  </h3>
               </div>
               
-              <div className="flex items-center gap-8 mt-4 md:mt-0 opacity-50 group-hover:opacity-100 transition-opacity">
-                <span className="text-lg font-light">{e.category}</span>
-                <span className="text-sm font-mono border border-surface1 px-2 rounded-full">{e.year}</span>
+              <div className="flex items-center gap-4 md:gap-8 mt-3 md:mt-0 opacity-80 md:opacity-50 md:group-hover:opacity-100 transition-opacity">
+                <span className="text-sm md:text-lg font-light">{e.category}</span>
+                <span className="text-xs md:text-sm font-mono border border-surface1 px-2 rounded-full">{e.year}</span>
               </div>
             </m.a>
           ))}

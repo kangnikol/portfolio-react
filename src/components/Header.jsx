@@ -40,10 +40,10 @@ const Header = () => {
       </span>
 
       {/* Navigation */}
-      <nav className="flex flex-col items-end gap-2 pointer-events-auto">
+      <nav className="flex flex-row md:flex-col items-center md:items-end gap-6 md:gap-2 pointer-events-auto">
         <m.button
           onClick={() => scrollToSection('home')}
-          className="text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
+          className="text-sm md:text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
           whileHover={{ x: -4 }}
         >
           Index
@@ -51,7 +51,7 @@ const Header = () => {
         </m.button>
         <m.button
           onClick={() => scrollToSection('projects')}
-          className="text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
+          className="text-sm md:text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
           whileHover={{ x: -4 }}
         >
           Work
@@ -59,7 +59,7 @@ const Header = () => {
         </m.button>
         <m.button
           onClick={() => scrollToSection('projects')} 
-          className="text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
+          className="text-sm md:text-lg font-medium text-subtext0 hover:text-text transition-colors text-right group"
           whileHover={{ x: -4 }}
         >
           Contact
