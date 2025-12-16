@@ -1,22 +1,36 @@
 import React from "react"
-import Modal from "./Modal"
+import { m } from "framer-motion"
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <>
-      <div className="flex justify-center lg:-mt-12">
-        <img
-          src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"
-          alt="catppuccin's Cat"
-          width={600}
-          height={75}
-        />
+    <footer className="px-6 md:px-12 py-20 border-t border-surface1 mt-20">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-[8vw] md:text-[5vw] font-black leading-none tracking-tighter text-text">
+            Let's work <br/>
+            <span className="text-overlay1">together.</span>
+          </h2>
+          <m.a 
+            href="mailto:nicholasalvisaputra@gmail.com" 
+            className="text-xl md:text-2xl font-light text-text hover:text-blue transition-colors mt-4"
+            whileHover={{ x: 10 }}
+          >
+            nicholasalvisaputra@gmail.com &rarr;
+          </m.a>
+        </div>
+
+        <div className="flex flex-col items-start md:items-end gap-2 text-sm font-medium text-subtext0 tracking-widest uppercase">
+           <a href="https://github.com/kangnikol" className="hover:text-text transition-colors">Github</a>
+           <a href="https://www.linkedin.com/in/nicholasalvis/" className="hover:text-text transition-colors">LinkedIn</a>
+           <a href="https://instagram.com" className="hover:text-text transition-colors">Instagram</a>
+           <span className="mt-8 text-overlay1 normal-case tracking-normal">
+             &copy; {currentYear} Nicholas Alvis.
+           </span>
+        </div>
       </div>
-      <footer className="text-white px-4 max-w-3xl w-full flex justify-between mx-auto items-center mb-12">
-        <div className="opacity-50 text-subtext0">© Nicholas Alvi S, 2023</div>
-        <Modal />
-      </footer>
-    </>
+    </footer>
   )
 }
 

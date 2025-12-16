@@ -1,73 +1,116 @@
-import React from "react"
-import ProjectCard from "../components/ProjectCard"
-import "../assets/css/style2.css"
+import React, { useState } from "react"
+import { m, AnimatePresence } from "framer-motion"
 
 const Project = () => {
+  const [hoveredProject, setHoveredProject] = useState(null)
+
   const projectList = [
     {
       title: "Senja Solusi",
-      desc: "A one-page website that tracks the accuracy of company headlines. The slogan 'WE BRING YOUR IDEAS TO LIFE' gives Senja good reasons to join the company with several projects, teams, and clients.",
+      category: "Web Development",
+      year: "2024",
       url: "https://senja.co.uk",
       imgUrl: "/senja.webp",
     },
     {
       title: "Pintek",
-      desc: "Pintek is a financial innovation company whose mission is to drive the transformation of education through financial service innovation and is committed to enabling the education ecosystem to develop sustainably.",
+      category: "EdTech",
+      year: "2023",
       url: "https://pintek.id",
       imgUrl: "/pintek.webp",
     },
     {
       title: "Ayoconnect",
-      desc: "Established in 2016, Ayoconnect is now Southeast Asia's largest Open Finance API platform. We provide full-stack API solutions, powering the leading companies of today and the tech unicorns of tomorrow.",
+      category: "Fintech API",
+      year: "2022",
       url: "https://ayoconnect.com/",
       imgUrl: "/ayoc.webp",
     },
     {
       title: "Nichol+ Hotstar",
-      desc: "Nichol+ Hotstar is actually a website that duplicate the looks from Disney+ Hotstar, using React.JS and TailwindCSS. I trained to consume API from TmdbAPI.",
+      category: "Web Clone",
+      year: "2022",
       url: "https://nichol-hotstar.vercel.app",
       imgUrl: "/nhotstar.webp",
     },
     {
       title: "Weather App",
-      desc: "Weather App that using OpenWeatherMap API and ReactJS with TailwindCSS. Also using Catppuccin's 'Mocha' Theme :3",
+      category: "Web App",
+      year: "2022",
       url: "https://weather-kangnikol.vercel.app/",
       imgUrl: "/weather.webp",
     },
-    // {
-    //   title: "Startpage (No longer used)",
-    //   desc: "This Startpage is built with somebody else, using Rosé Pine Theme and hosted to Vercel. it searched to Gowogle engine",
-    //   url: "https://startpage-kangnikol.vercel.app/",
-    //   imgUrl:
-    //     "https://media.discordapp.net/attachments/917983285370572821/1027058349486903347/Screen_Shot_2022-09-28_at_11.17.53.webp",
-    // },
+    {
+      title: "Startpage (Deprecated)",
+      category: "Utility",
+      year: "2022",
+      url: "https://startpage-kangnikol.vercel.app/",
+      imgUrl: "https://placehold.co/600x400/1e1e2e/cdd6f4?text=404+Not+Found",
+    },
   ]
+  
   return (
-    <div className="flex flex-col">
-      <main className="flex-1 mt-12 px-4 max-w-5xl mx-auto">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-yellow text-4xl font-black my-4 border-b border-overlay0 py-4">
-            Projects!
-          </h1>
+    <section id="projects" className="py-20">
+      <div className="flex flex-col gap-12">
+        <div className="flex justify-between items-end border-b border-surface1 pb-4">
+           <h2 className="text-xl font-medium text-subtext0 uppercase tracking-widest">Selected Works</h2>
+           <span className="text-xl font-medium text-subtext0">({projectList.length})</span>
         </div>
-        <div className="mb-16 gap-8" id="projects">
-          <p className="max-w-3xl mx-auto text-text">
-            I believe it’s the best way to learn anything. You get full control
-            over the creative side of programming. Here’s is a partial list of
-            projects I have built over the last few years:
-          </p>
+
+        <div className="flex flex-col relative w-full" onMouseLeave={() => setHoveredProject(null)}>
           {projectList.map((e, i) => (
-            <ProjectCard
+            <m.a 
               key={i}
-              title={e.title}
-              desc={e.desc}
-              url={e.url}
-              imgUrl={e.imgUrl}
-            />
+              href={e.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="group flex flex-col md:flex-row md:items-center justify-between py-12 border-b border-surface1 hover:border-text transition-colors relative z-10"
+              onMouseEnter={() => setHoveredProject(i)}
+            >
+              <div className="flex items-baseline gap-4 md:gap-12">
+                 <span className="font-mono text-sm text-overlay2">0{i + 1}</span>
+                 <h3 className="text-4xl md:text-6xl font-bold text-text group-hover:translate-x-4 transition-transform duration-500 ease-out">
+                   {e.title}
+                 </h3>
+              </div>
+              
+              <div className="flex items-center gap-8 mt-4 md:mt-0 opacity-50 group-hover:opacity-100 transition-opacity">
+                <span className="text-lg font-light">{e.category}</span>
+                <span className="text-sm font-mono border border-surface1 px-2 rounded-full">{e.year}</span>
+              </div>
+            </m.a>
           ))}
+          
+          {/* Floating Image Reveal - Hidden on mobile */}
+          <AnimatePresence>
+            {hoveredProject !== null && (
+              <m.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                className="hidden lg:block fixed pointer-events-none z-0 rounded-2xl overflow-hidden w-[400px] h-[300px] shadow-2xl"
+                style={{ 
+                  top: '20%', 
+                  right: '10%',
+                  rotate: -5
+                }}
+              >
+                 <img 
+                   src={projectList[hoveredProject].imgUrl} 
+                   alt="Project Preview" 
+                   className="w-full h-full object-cover"
+                 />
+              </m.div>
+            )}
+          </AnimatePresence>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   )
 }
 

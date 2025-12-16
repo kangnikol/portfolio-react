@@ -1,17 +1,32 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { m } from "framer-motion"
 
 const ProjectCard = (props) => {
   return (
-    <div className="bg-surface0 flex lg:p-8 p-4 rounded-lg items-center side-project gap-8 flex-1">
+    <m.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02 }}
+      className="bg-surface0 flex lg:p-8 p-6 rounded-3xl items-center side-project gap-8 flex-1 border border-surface1 hover:border-blue transition-colors"
+    >
       <div className="flex-1 w-1/2">
-        <h2 className="text-yellow text-2xl font-bold">{props.title}</h2>
-        <div className="mb-4 mt-2">
-          <p className="text-text">{props.desc}</p>
+        <m.h2 
+          className="text-blue text-2xl font-bold"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {props.title}
+        </m.h2>
+        <div className="mb-6 mt-3">
+          <p className="text-subtext0 leading-relaxed">{props.desc}</p>
         </div>
         <Link
           to={props.url}
-          className="inline-flex items-center gap-3 rounded-lg bg-yellow opacity-95 py-3 px-5 text-sm leading-5 font-semibold text-surface0 transition-all hover:opacity-100 active:scale-95 active:transform-none"
+          className="inline-flex items-center gap-3 rounded-full bg-blue py-3 px-6 text-sm font-semibold text-base transition-all hover:opacity-90 active:scale-95"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,7 +39,6 @@ const ProjectCard = (props) => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            color=""
             data-id="svg-loader_2"
           >
             <path
@@ -36,10 +50,10 @@ const ProjectCard = (props) => {
           </svg>
         </Link>
       </div>
-      <div className="w-1/2 mx-auto hidden lg:block">
-        <img className="bg-cover" src={props.imgUrl} />
+      <div className="w-1/2 mx-auto hidden lg:block overflow-hidden rounded-2xl">
+        <img className="bg-cover w-full h-full object-cover hover:scale-105 transition-transform duration-500" src={props.imgUrl} alt={props.title} />
       </div>
-    </div>
+    </m.div>
   )
 }
 

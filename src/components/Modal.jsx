@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { m, AnimatePresence } from "framer-motion"
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false)
+
   const openModal = () => {
     setShowModal(true)
   }
@@ -10,94 +12,129 @@ const Modal = () => {
     setShowModal(false)
   }
 
+  // Handle Escape key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        closeModal()
+      }
+    }
+    window.addEventListener("keydown", handleEsc)
+    return () => window.removeEventListener("keydown", handleEsc)
+  }, [])
+
   return (
     <>
       <button
-        className="inline-flex py-2 px-4 items-center gap-3 rounded-full text-text/100 hover:opacity-100 opacity-90 bg-surface0 transition-all active:transform active:scale-x-90 active:scale-y-90"
+        className="inline-flex py-2 px-4 items-center gap-3 rounded-full text-text hover:text-blue hover:bg-surface1 transition-colors bg-surface0 border border-surface1"
         onClick={openModal}
       >
         <svg
-          data-src="https://s2.svgbox.net/materialui.svg?ic=mail"
+          xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
-          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="currentColor"
-          color=""
-          data-id="svg-loader_9"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
         Contact Me
       </button>
-      {showModal && (
-        <div className="fixed h-screen w-screen overflow-hidden z-auto top-0 left-0 bottom-0 right-0 opacity-100 backdrop-blur-2xl astro-A4YOCCPA">
-          <div className="relative mx-4 opacity-100 h-screen w-screen rounded-3xl transition-all duration-300 ease-in-out border-base flex items-center astro-A4YOCCPA">
-            <div className="max-w-3xl lg:mx-auto mr-8 text-text astro-A4YOCCPA">
-              <div className="text-3xl font-black text-primary astro-A4YOCCPA">
-                Get In Touch
+
+      <AnimatePresence>
+        {showModal && (
+          <m.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-crust/80 backdrop-blur-sm"
+            onClick={closeModal} // Close on backdrop click
+          >
+            <m.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()} // Prevent close on content click
+              className="relative w-full max-w-2xl bg-base border border-surface0 rounded-3xl p-8 shadow-2xl"
+            >
+              <div className="flex justify-between items-start mb-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-text mb-2">Get In Touch</h2>
+                  <p className="text-subtext0">
+                     Have a question or proposal? I'd love to hear from you.
+                  </p>
+                </div>
+                <button 
+                  onClick={closeModal}
+                  className="p-2 hover:bg-surface0 rounded-lg transition-colors text-subtext0 hover:text-text"
+                >
+                  <span className="sr-only">Close</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
               </div>
-              <div
-                className="absolute right-8 top-8 text-text items-center gap-2 flex astro-A4YOCCPA"
-                onClick={closeModal}
-              >
-                <span className="bg-yellow opacity-50 hover:opacity-100 text-crust text-xs px-2 py-1 rounded lg:block astro-A4YOCCPA cursor-pointer">
-                  esc
-                </span>
-                <svg
-                  data-src="https://s2.svgbox.net/materialui.svg?ic=close"
-                  width="24"
-                  height="24"
-                  id="close"
-                  className="hover:text-text cursor-pointer astro-A4YOCCPA"
-                />
-              </div>
+
               <form
                 action="https://formspree.io/f/meqderqp"
                 method="POST"
-                className="astro-A4YOCCPA"
+                className="space-y-4"
               >
-                <p className="mt-2 text-text astro-A4YOCCPA">
-                  Do you have an interesting job opportunity? Want to ask me a
-                  question? Or, just want to connect? Feel free to contact me.
-                </p>
-                <div
-                  className="lg:flex-row flex-col flex mt-6 gap-4 astro-A4YOCCPA
-                "
-                >
-                  <input
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-subtext0">Name</label>
+                    <input
+                      required
+                      id="name"
+                      name="name"
+                      type="text"
+                      className="w-full bg-surface0 border border-surface1 rounded-xl p-3 text-text focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-all"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-subtext0">Email</label>
+                    <input
+                      required
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="w-full bg-surface0 border border-surface1 rounded-xl p-3 text-text focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-all"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-subtext0">Message</label>
+                  <textarea
                     required
-                    name="name"
-                    type="text"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-yellow astro-A4YOCCPA"
-                    placeholder="Full Name"
-                  />
-                  <input
-                    required
-                    name="email"
-                    type="email"
-                    className="flex-1 bg-mantle p-3 rounded outline-none placeholder:text-text text-input text-lg w-auto lg:w-64 border border-yellow astro-A4YOCCPA"
-                    placeholder="Email"
+                    id="message"
+                    name="message"
+                    className="w-full bg-surface0 border border-surface1 rounded-xl p-3 text-text focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue transition-all h-40 resize-none"
+                    placeholder="Hello..."
                   />
                 </div>
-                <textarea
-                  required
-                  name="message"
-                  className="w-full bg-mantle p-3 rounded outline-none placeholder:text-text text-input mt-4 resize-none h-64 text-lg border border-yellow astro-A4YOCCPA"
-                  placeholder="Message"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center gap-3 rounded-lg bg-yellow opacity-50 py-3 px-5 text-sm leading-5 font-semibold text-crust transition-all hover:opacity-100 active:scale-95 active:transform-none mt-4 astro-A4YOCCPA"
-                >
-                  Send
-                </button>
+
+                <div className="pt-4 flex justify-end">
+                  <button
+                    type="submit"
+                    className="bg-blue text-base px-6 py-3 rounded-xl font-semibold hover:bg-blue/90 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </div>
               </form>
-            </div>
-          </div>
-        </div>
-      )}
+            </m.div>
+          </m.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
