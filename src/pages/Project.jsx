@@ -44,7 +44,7 @@ const Project = () => {
       title: "Startpage (Deprecated)",
       category: "Utility",
       year: "2022",
-      url: "https://startpage-kangnikol.vercel.app/",
+      url: "no, you can't actually :P",
       imgUrl: "https://placehold.co/600x400/1e1e2e/cdd6f4?text=404+Not+Found",
     },
   ]
