@@ -8,14 +8,14 @@ const Project = () => {
     {
       title: "Senja Solusi",
       category: "Company Profile",
-      year: "2024",
+      year: "2021",
       url: "https://senja.co.uk",
       imgUrl: "/senja.webp",
     },
     {
       title: "Pintek",
       category: "Education Fintech",
-      year: "2023",
+      year: "2021",
       url: "https://pintek.id",
       imgUrl: "/pintek.webp",
     },
@@ -36,7 +36,7 @@ const Project = () => {
     {
       title: "Weather App",
       category: "Weather App",
-      year: "2022",
+      year: "2023",
       url: "https://weather-kangnikol.vercel.app/",
       imgUrl: "/weather.webp",
     },
