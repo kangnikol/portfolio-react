@@ -36,8 +36,23 @@ const Home = () => {
                   </m.span>
                 ))}
               </span>
+              {"Alvi".split("").map((char, i) => (
+                <m.span
+                  key={i}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                    ease: [0.33, 1, 0.68, 1],
+                    delay: 0.1 + i * 0.03,
+                  }}
+                  className="inline-block"
+                >
+                  {char}
+                </m.span>
+              ))}
               <span className="block overflow-hidden">
-                {"Alvis".split("").map((char, i) => (
+                {"Saputra".split("").map((char, i) => (
                   <m.span
                     key={i}
                     initial={{ y: "100%" }}
